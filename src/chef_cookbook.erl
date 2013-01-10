@@ -39,7 +39,7 @@
 -include("chef_types.hrl").
 
 %% FIXME:  This should be pulled out into app.config
--define(GET_URL_TTL, 900).
+{ok, GET_URL_TTL } =  application:get_env(chef_objects, get_url_ttl).
 
 -define(DEFAULT_FIELD_VALUES,
         [
